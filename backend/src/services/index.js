@@ -1,8 +1,9 @@
 import dbServices from "./dbServices.js";
 
 const services = {
-	init: () => {
-		console.log("initialize services here")
+	db: null,
+	init: async () => {
+		services.db = await dbServices.init();
 	}
 }
 
